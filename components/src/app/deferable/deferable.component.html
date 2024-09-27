@@ -1,0 +1,89 @@
+<h1>Deferable views</h1>
+
+<div>
+    @defer {
+    <div>
+        What you'll learn
+        <ul>
+            <li>
+                Your app has a new interface that it can use as a data type.
+            </li>
+            <li>
+                Your app has an instance of the new interface with sample data.
+            </li>
+            <li>
+                Conceptual preview of interfaces
+            </li>
+            <li>
+                Interfaces are custom data types for your app.
+            </li>
+        </ul>
+        <p>
+            Angular uses TypeScript to take advantage of working in a strongly typed programming environment. Strong type checking reduces the likelihood of one element in your app sending incorrectly formatted data to another. Such type-mismatch errors are caught by the TypeScript compiler and many such errors can also be caught in your IDE.
+        </p>
+        In this lesson, you'll create an interface to define properties that represent data about a single housing location.
+    </div>
+    } @placeholder {
+    <p>Placeholder content</p>
+    }
+
+<hr>
+
+@defer (on interaction; prefetch on timer(0.5s)) {
+<large-content></large-content>
+} @placeholder {
+<p>Cuando interactues con este PLACEHOLDER cargara el componente large-content</p>
+} @loading (minimum 500ms) {
+<p>Cargando</p>
+}
+
+<hr>
+
+<h2>
+    On timer
+</h2>
+      
+@defer (on timer(4s)) {
+    <p>
+        Esto debe aparecer 4s despues
+    </p>
+} @placeholder {
+<div>This will show after 4s</div>
+}
+
+    
+<h2 #referring>
+    Con referencia
+</h2>
+        
+@defer (on interaction(referring)) {
+    Esto es por hacer interacion al titulo anterior, click o keydown
+}
+
+
+<h2>Esto aparecera haciendo hover a referencia</h2>
+@defer (on hover(referring)) {
+    Esto aparecio haciendo hover a referencia
+}
+
+<hr>
+
+<h2>when</h2>
+@defer (when condition) {
+    La condition es {{condition}}
+} @placeholder {
+    <button (click)="condition=true">Click this</button>
+}
+      
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolore sit repudiandae, dolorum, cupiditate velit quae incidunt maxime vitae optio dolorem architecto labore laudantium vel omnis? Vero sint odit similique.
+</p>
+
+<h2>Viewport</h2>
+@defer (on viewport) {
+    Este es el componente de user-profile
+    <app-user-profile></app-user-profile>
+} @placeholder {
+    <button (click)="condition=true">Click this</button>
+}
+</div>

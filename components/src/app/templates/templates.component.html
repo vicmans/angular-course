@@ -1,0 +1,20 @@
+
+<h2>Usando ngComponentOutlet</h2>
+
+<ng-container [ngComponentOutlet]="profileComponent()" />
+
+<ng-template #admin>This is the admin profile</ng-template>
+<ng-template #basic>This is the basic profile</ng-template>
+
+<hr>
+
+<h2>Usando ngTemplateOutlet</h2>
+
+<ng-container [ngTemplateOutlet]="profileTemplate()" />
+
+<h2>Agrupando elementos</h2>
+
+<ng-container *ngIf="isAdmin">
+    <h1>Admin Dashboard</h1>
+    Dashboard de admin
+</ng-container>

@@ -1,0 +1,27 @@
+<h2>large-content components!</h2>
+
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ad itaque pariatur. Recusandae doloremque dolore assumenda amet quod voluptatem eveniet est a eius? Porro nesciunt est, provident natus numquam id.
+</p>
+
+<h3>And more large content</h3>
+
+<p>
+    Component templates are not always fixed. An application might need to load new components at runtime. This cookbook shows you how to add components dynamically.
+    
+    See the live example / download example of the code in this cookbook.
+</p>
+
+<h3>
+    Rendering components dynamically
+</h3>
+
+<p>
+    The following example shows how to build a dynamic ad banner.
+    
+    The hero agency is planning an ad campaign with several different ads cycling through the banner. New ad components are added frequently by several different teams. This makes it impractical to use a template with a static component structure.
+    
+    Instead, you need a way to load a new component without a fixed reference to the component in the ad banner's template.
+    
+    The NgComponentOutlet directive can be used to instantiate components and insert them into the current view. This directive allows you to provide a component class that should be rendered, as well as component inputs to be used during initialization.
+</p>

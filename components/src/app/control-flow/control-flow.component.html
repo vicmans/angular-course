@@ -1,0 +1,60 @@
+<h1>Componentes</h1>
+
+@if (condition) {
+  Condicion es verdadera
+} @else {
+  condition es {{condition}}
+}
+
+@let users = users$ | async;
+
+<div *ngIf="condition">
+  la condicion
+</div>
+
+<h2>for</h2>
+
+<div class="row">
+
+<div class="col">
+
+  @for (user of users; track user.name) {
+    <p>{{ user.name }}</p>
+  } @empty {
+    No hay usuarios users
+  }
+</div>
+
+<div class="col">
+  <ng-container *ngFor="let user of users">
+    <span>{{ user.email }}</span> <br>
+  </ng-container>
+</div>
+
+</div>
+
+<h2>The switch</h2>
+
+@switch (userPermissions) {
+  @case ('admin') {
+    Is admin
+  }
+  @case ('client') {
+    Is client
+  }
+  @case ('editor') {
+    Is editor
+  }
+  @default {
+    Hello guest
+  }
+}
+
+<h2>let</h2>
+
+@let greeting = 'Esta es una variable declarada en template';
+
+<p>
+  {{ greeting }}
+</p>
+

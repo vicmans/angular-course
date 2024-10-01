@@ -1,0 +1,12 @@
+<label
+      [ngStyle]="{
+        'text-decoration': todo().completed ? 'line-through' : 'none'
+      }"
+    >
+      <input
+        type="checkbox"
+        [checked]="todo().completed"
+        (change)="update(todo())"
+      />
+      {{ todo().title }}
+</label>

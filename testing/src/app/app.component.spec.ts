@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { provideRouter, RouterOutlet } from '@angular/router';
-import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideRouter } from '@angular/router';
 import { By } from '@angular/platform-browser';
 
 describe('AppComponent', () => {
@@ -12,7 +11,6 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
       providers: [
-        provideHttpClientTesting(),
         provideRouter([]),
       ]
     }).compileComponents();
@@ -27,11 +25,6 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have the 'isAdmin' false`, () => {
-    const app = fixture.componentInstance;
-    expect(app.isAdmin()).toBeFalse();
   });
 
   it('contains a router outlet', () => {

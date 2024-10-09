@@ -28,3 +28,4 @@ ng serve
 - [01 - Components](components)
 - [02 - Change Detection / Signals](signals)
 - [03 - Routing / Providers](routing)
+- [04 - Testing](testing)

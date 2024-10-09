@@ -1,0 +1,18 @@
+<h2 class="font-medium ">
+    Mis favoritos
+</h2>
+<div class="my-5">
+    Aca va una lista de tus productos favoritos
+</div>
+
+<div>
+    @if (!isAdmin()){
+        Quiero ser 
+    } @else {
+        Eres
+    } Admin
+    <ng-toggle
+        [value]="isAdmin()"
+        (valueChange)="changeValue($event)"
+    ></ng-toggle>
+</div>

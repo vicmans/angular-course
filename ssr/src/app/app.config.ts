@@ -2,8 +2,9 @@ import { ApplicationConfig, provideExperimentalZonelessChangeDetection, provideZ
 import { PreloadAllModules, provideRouter, withComponentInputBinding, withPreloading } from '@angular/router';
 
 import { routes } from './app.routes';
-import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { loggerInterceptor } from './shared/logger-interceptor.interceptor';
+import { provideClientHydration } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -12,7 +13,9 @@ export const appConfig: ApplicationConfig = {
       withPreloading(PreloadAllModules),
     ),
     provideHttpClient(
+      withFetch(),
       withInterceptors([loggerInterceptor]),
     ),
+    provideClientHydration(),
   ]
 };

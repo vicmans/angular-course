@@ -2,6 +2,8 @@
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/angularssrlesson?file=README.md)
 
+The starter code in the branch `ssr-initial`
+
 To start with Angular SSR run the following command
 
 ```sh

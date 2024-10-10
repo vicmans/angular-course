@@ -4,6 +4,7 @@ import { Product } from '../../data/product';
 import { ProductService } from '../../data/product.service';
 import { AsyncPipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-product',
@@ -21,23 +22,21 @@ export class ProductComponent implements OnInit {
   productService = inject(ProductService);
   // id = input.required<number>()
   route = inject(ActivatedRoute);
+  title = inject(Title);
+  meta = inject(Meta);
 
-  // effec = effect(() => {
-  //   if (this.product())
-  //     this.productBase = this.route.snapshot.data['product']
-  //   console.log(this.productBase)
-  // })
   productBase: Product | null = null;
   
   ngOnInit(): void {
-    // if (this.id()) {
-    //   this.productService.findById(this.id()).subscribe((product) => {
-    //     this.product = product
-    //   })
-    // }
     this.route.data.subscribe(({ product }) => {
       // do something with your resolved data ...
       this.productBase = product
+      this.title.setTitle(product.name);
+
+      this.meta.updateTag({name: "description", content: product.description});
+      this.meta.addTag({property: 'og:title', content: product.title});
+      this.meta.addTag({property: 'og:description', content: product.description});
+      this.meta.addTag({property: 'og:image', content: product.image});
     })
   }
 }

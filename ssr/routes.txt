@@ -1,0 +1,4 @@
+/products/18
+/products/19
+/products/20
+/products/555

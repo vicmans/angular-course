@@ -29,3 +29,4 @@ ng serve
 - [02 - Change Detection / Signals](signals)
 - [03 - Routing / Providers](routing)
 - [04 - Testing](testing)
+- [05 - Angular SSR](ssr)

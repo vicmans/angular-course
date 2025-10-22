@@ -2,7 +2,6 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-job-ad',
-  standalone: true,
   imports: [],
   template: `
     <div class="job-ad">

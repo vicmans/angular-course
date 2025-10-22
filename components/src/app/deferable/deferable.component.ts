@@ -4,9 +4,8 @@ import { LargeContentComponent } from '../components/large-content/large-content
 
 @Component({
   selector: 'app-deferable',
-  standalone: true,
   imports: [UserProfileComponent, LargeContentComponent],
-  templateUrl: './deferable.component.html',
+  templateUrl: './deferable.component.html'
 })
 export class DeferableComponent {
   condition = false;

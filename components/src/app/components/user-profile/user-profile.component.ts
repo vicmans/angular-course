@@ -6,7 +6,6 @@ import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-user-profile',
-  standalone: true,
   imports: [NgComponentOutlet, ButtonComponent],
   templateUrl: './user-profile.component.html'
 })

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'button[baseButton],a[baseButton]',
-  standalone: true,
   imports: [],
   template: `
     <ng-content />

@@ -2,7 +2,6 @@ import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-product-ad',
-  standalone: true,
   imports: [],
   template: `
     <strong>

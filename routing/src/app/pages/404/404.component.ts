@@ -3,7 +3,6 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-404',
-  standalone: true,
   imports: [RouterLink],
   template: `
     <p>

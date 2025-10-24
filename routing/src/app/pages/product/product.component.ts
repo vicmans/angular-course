@@ -2,12 +2,10 @@ import { Component, inject, input, OnInit } from '@angular/core';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
 import { Product } from '../../data/product';
 import { ProductService } from '../../data/product.service';
-import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-product',
-  standalone: true,
-  imports: [ProductCardComponent, AsyncPipe],
+  imports: [ProductCardComponent],
   template: `
     @if (product) {
       <div class="md:w-1/2 mx-auto">

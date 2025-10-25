@@ -4,7 +4,6 @@ import { TodoComponent } from '../todo/todo.component';
 
 @Component({
   selector: 'app-todos',
-  standalone: true,
   imports: [TodoComponent],
   templateUrl: './todos.component.html',
 })

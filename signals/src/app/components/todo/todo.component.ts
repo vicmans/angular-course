@@ -4,7 +4,6 @@ import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-todo',
-  standalone: true,
   imports: [NgStyle],
   templateUrl: './todo.component.html',
 })

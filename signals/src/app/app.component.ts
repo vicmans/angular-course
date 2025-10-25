@@ -4,14 +4,12 @@ import { Todo } from './todo';
 import { FormsModule } from '@angular/forms';
 import { StorageService } from './storage.service';
 import { SearchComponent } from "./components/search/search.component";
-import { TodoComponent } from './components/todo/todo.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { TodoService } from './todo.service';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, FormsModule, SearchComponent, TodoComponent, TodosComponent],
+  imports: [CommonModule, FormsModule, SearchComponent, TodosComponent],
   template: `
   <div class="container">
     <h1>TODO List</h1>

@@ -6,7 +6,6 @@ import { FormatMoneyPipe } from "../../shared/pipes/format-money.pipe";
 
 @Component({
   selector: 'app-product-card',
-  standalone: true,
   imports: [RouterLink, IsFavoriteDirective, FormatMoneyPipe],
   templateUrl: './product-card.component.html',
 })

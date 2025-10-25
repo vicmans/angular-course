@@ -4,7 +4,6 @@ import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   imports: [ProductListComponent],
   templateUrl: './home.component.html',
 })

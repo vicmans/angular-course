@@ -5,7 +5,6 @@ import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-profile',
-  standalone: true,
   imports: [NgToggleModule],
   templateUrl: './profile.component.html',
 })

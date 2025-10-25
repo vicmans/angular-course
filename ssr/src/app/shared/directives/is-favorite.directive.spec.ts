@@ -4,7 +4,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 @Component({
-  standalone: true,
   template: `
     <div [isFavorite]="favorite" data-testid="favorite"></div>
   `,

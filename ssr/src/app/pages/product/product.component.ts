@@ -1,15 +1,13 @@
-import { Component, effect, inject, input, OnInit, Signal, signal, WritableSignal } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
 import { Product } from '../../data/product';
 import { ProductService } from '../../data/product.service';
-import { AsyncPipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-product',
-  standalone: true,
-  imports: [ProductCardComponent, AsyncPipe],
+  imports: [ProductCardComponent],
   template: `
     @if (productBase) {
       <div class="md:w-1/2 mx-auto">

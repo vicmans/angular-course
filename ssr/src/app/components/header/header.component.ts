@@ -4,7 +4,6 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  standalone: true,
   imports: [RouterLink],
   template: `
     <nav class="p-4 container mx-auto">

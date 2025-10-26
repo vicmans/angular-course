@@ -7,8 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product',
-  standalone: true,
-  imports: [ProductCardComponent, AsyncPipe],
+  imports: [ProductCardComponent],
   template: `
     @if (productBase) {
       <div class="md:w-1/2 mx-auto">
